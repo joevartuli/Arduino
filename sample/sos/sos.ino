@@ -8,7 +8,7 @@ void loop() {
   flashAtRate(200);
   flashAtRate(1000);
   flashAtRate(200);
-  delay(4000);
+  delay(50);
 } 
 
 void flashAtRate(int rate) {
