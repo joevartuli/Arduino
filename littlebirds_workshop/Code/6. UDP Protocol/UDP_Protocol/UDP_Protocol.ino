@@ -13,8 +13,8 @@
 // Enter a MAC address and IP address for your controller below.
 // The IP address will be dependent on your local network:
 byte mac[] = {  
-  0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0x10 }; // Set this last byte to the one on your silver sticker
-IPAddress ip(192, 168, 1, 116); // Set this last digit to the one on your silver sticker
+  0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0x0B }; // Set this last byte to the one on your silver sticker
+IPAddress ip(192, 168, 1, 111); // Set this last digit to the one on your silver sticker
 
 unsigned int localPort = 8888;      // local port to listen on
 
@@ -83,7 +83,7 @@ void loop() {
     // Read the X Joystick
     int joy_val = 255-analogRead(JOY_X)/4;
     // Structure the reply packet
-    sprintf(ReplyBuffer, "%i", 255);
+    sprintf(ReplyBuffer, "%c", joy_val);
     Udp.write(ReplyBuffer);
     Udp.endPacket();
   }
