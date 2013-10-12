@@ -9,9 +9,9 @@
 // Enter a MAC address and IP address for your controller below.
 // The IP address will be dependent on your local network:
 byte mac[] = {  
-  0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0x10 }; // Change the last byte to the one we assigned to you.
+  0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0x0B }; // Change the last byte to the one we assigned to you.
 //IPAddress ip(192, 168, 1, 100);  // Change the last number to the one we assigned to you.
-IPAddress ip(192, 168, 1, 116);  // Change the last number to the one we assigned to you.
+IPAddress ip(192, 168, 1, 111);  // Change the last number to the one we assigned to you.
 
 
 #define JOY_X A3
