@@ -10,6 +10,7 @@
 #define green 5
 #define blue 3
 #define speaker 7
+#define rumble 4
 
 
 void setup() {
@@ -20,6 +21,11 @@ void setup() {
 	pinMode(green, OUTPUT);
 	pinMode(blue, OUTPUT);
 	pinMode(speaker, OUTPUT);
+	pinMode(rumble, OUTPUT);
+
+	digitalWrite(rumble, HIGH); 
+	delay(1000);
+	digitalWrite(rumble, LOW); 
 
 }
 
@@ -35,13 +41,13 @@ void loop() {
 	
 	delay(50);
 
-	for (int i = 5; i < 150; i++) {
-		for (int j = 0; j < 10; j++) {
-			digitalWrite(speaker, HIGH); 
-			delay(.1*i);
-			digitalWrite(speaker, LOW); 
-			delay(.1*i);
-		}
-	} 
+	// for (int i = 5; i < 150; i++) {
+	// 	for (int j = 0; j < 10; j++) {
+	// 		digitalWrite(speaker, HIGH); 
+	// 		delay(.1*i);
+	// 		digitalWrite(speaker, LOW); 
+	// 		delay(.1*i);
+	// 	}
+	// } 
 
 }
