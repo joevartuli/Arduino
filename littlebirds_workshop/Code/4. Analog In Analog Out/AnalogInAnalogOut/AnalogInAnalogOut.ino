@@ -4,22 +4,32 @@
 //  - Maps the value of analogInput 0 to PWM on pin 5
 //
 
-#define potIn 0
-#define ledPin 5
+#define xpot A3
+#define ypot A2
+#define red 6
+#define green 5
+#define blue 3
 
 void setup() {
-  pinMode(potIn, INPUT);
-  analogReference(DEFAULT);//INTERNAL);
-  Serial.begin(9600);
-  pinMode(ledPin, OUTPUT);
+	// Defines
+	pinMode(xpot, INPUT);
+	pinMode(ypot, INPUT);
+	pinMode(red, INPUT);
+	pinMode(green, INPUT);
+	pinMode(blue, INPUT);
+
 }
 
 void loop() {
- 
-  int potInValue = analogRead(potIn);
-  int mappedValue = map(potInValue, 0, 1023, 255, 0);
- Serial.println(potInValue);
- analogWrite(ledPin, mappedValue);
- delay(50); 
-  
+	int xpotValue = analogRead(xpot);
+	int ypotValue = analogRead(ypot);
+
+	int redv = map(xpotValue, 0, 1023, 255, 0);
+	int bluev = map(ypotValue, 0, 1023, 0, 255);
+
+	analogWrite(red, redv); 
+	analogWrite(blue, bluev);
+	
+	delay(50); 
+
 }
