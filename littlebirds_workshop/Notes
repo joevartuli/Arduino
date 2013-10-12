@@ -1,0 +1,43 @@
+Notes
+====================
+
+V = I * R
+
+Oscilloscope - from litttle birds
+LED testers
+
+Design Patterns
+====================
+- Voltage Divider
+- Power Decoupler
+
+Research
+====================
+Port Arithmetic 
+BitMath
+Pulse with Modulation
+
+PIN
+====================
+0
+1
+2
+3  - Blue LED
+4  - Rumble
+5  - Green LED
+6  - Red LED
+7  - Speaker
+8  - Yellow
+9  - Blue
+10
+11
+12 - Red (ethernet)
+13
+
+A0 - Joystick Click
+A1 - Green
+A2 - Y Joystick (0 - 1024)
+A3 - X Joystick (0 - 1024)
+
+
+
