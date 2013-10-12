@@ -9,14 +9,17 @@
 #define red 6
 #define green 5
 #define blue 3
+#define speaker 7
+
 
 void setup() {
 	// Defines
 	pinMode(xpot, INPUT);
 	pinMode(ypot, INPUT);
-	pinMode(red, INPUT);
-	pinMode(green, INPUT);
-	pinMode(blue, INPUT);
+	pinMode(red, OUTPUT);
+	pinMode(green, OUTPUT);
+	pinMode(blue, OUTPUT);
+	pinMode(speaker, OUTPUT);
 
 }
 
@@ -30,6 +33,15 @@ void loop() {
 	analogWrite(red, redv); 
 	analogWrite(blue, bluev);
 	
-	delay(50); 
+	delay(50);
+
+	for (int i = 5; i < 150; i++) {
+		for (int j = 0; j < 10; j++) {
+			digitalWrite(speaker, HIGH); 
+			delay(.1*i);
+			digitalWrite(speaker, LOW); 
+			delay(.1*i);
+		}
+	} 
 
 }
