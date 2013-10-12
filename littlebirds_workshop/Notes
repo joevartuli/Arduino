@@ -16,6 +16,7 @@ Research
 Port Arithmetic 
 BitMath
 Pulse with Modulation
+Baud rate
 
 PIN
 ====================
@@ -38,6 +39,8 @@ A0 - Joystick Click
 A1 - Green
 A2 - Y Joystick (0 - 1024)
 A3 - X Joystick (0 - 1024)
+
+
 
 
 
