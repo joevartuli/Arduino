@@ -24,14 +24,14 @@ void setup() {
   Serial.println("Arduino");
 
   pinMode(yellow,INPUT);
-  
+
 }
 
 
 void loop() {
   
   // Read a digital input
-  boolean button_state = digitalRead(pin_a); // Happens to be the blue button
+  boolean button_state = digitalRead(yellow); // Happens to be the blue button
   
   // Read an analog input
   int x_stick = analogRead(a1); // Happens to be the X joystick
